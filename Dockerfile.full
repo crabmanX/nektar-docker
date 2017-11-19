@@ -1,4 +1,4 @@
-FROM nektar-env
+FROM crabmanx2/nektar-env
 
 MAINTAINER <Kilian Lackhove> "<kilian@lackhove.de>"
 
