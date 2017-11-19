@@ -5,6 +5,7 @@ MAINTAINER <Kilian Lackhove> "<kilian@lackhove.de>"
 USER nektar:nektar
 WORKDIR /home/nektar
 
+RUN cd /home/nektar/nektar && git pull origin master
 RUN mkdir build && \
     cd build && \
     CC=/usr/bin/clang CXX=/usr/bin/clang++ FC=/usr/bin/gfortran cmake \
