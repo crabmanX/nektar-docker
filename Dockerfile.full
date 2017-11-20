@@ -19,4 +19,10 @@ RUN mkdir build && \
     -DTHIRDPARTY_BUILD_SCOTCH:BOOL=ON -DNEKTAR_TEST_USE_HOSTFILE=ON \
     -DNEKTAR_USE_MESHGEN:BOOL=ON \
     ../nektar/ && \
-    CC=/usr/bin/clang CXX=/usr/bin/clang++ FC=/usr/bin/gfortran make -j 8
+    CC=/usr/bin/clang CXX=/usr/bin/clang++ FC=/usr/bin/gfortran make boost \
+    modmetis-5.1.0 vtk-5.10.1 gsmpi-1.2.1 oce-0.17 arpack-ng-1.0 fftw-3.2.2 \
+    scotch-6.0.0 zlib-1.2.7 tetgen-1.5 hdf5-1.8.16 petsc-3.7.2 tinyxml-2.6.2
+RUN cd build && CC=/usr/bin/clang CXX=/usr/bin/clang++ FC=/usr/bin/gfortran make
+
+
+
